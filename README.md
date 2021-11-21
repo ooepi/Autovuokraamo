@@ -15,6 +15,5 @@ As admin, ability to add different cars and view rentals
 
 Java for backend
   - Spring Boot
-  - MariaDB for database
 
 Frontend tech not yet chosen
