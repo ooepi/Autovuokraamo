@@ -1,13 +1,13 @@
-package fi.autovuokraamo.rh;
+package fi.roha.carRental;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RhApplication {
+public class CarRental {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RhApplication.class, args);
+		SpringApplication.run(CarRental.class, args);
 	}
 
 }

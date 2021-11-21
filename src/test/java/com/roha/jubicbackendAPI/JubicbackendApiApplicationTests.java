@@ -1,10 +1,10 @@
-package fi.autovuokraamo.rh;
+package com.roha.jubicbackendAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RhApplicationTests {
+class JubicbackendApiApplicationTests {
 
 	@Test
 	void contextLoads() {
