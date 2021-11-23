@@ -39,6 +39,7 @@ public class CarController {
 		logger.info("New car: " + car);
 	}
 	
+	
 	@DeleteMapping("/cars/{id}")
 	public ResponseEntity<?> deleteCar(@PathVariable(value = "id") Long car_id) throws CarNotFoundException{
 		Car car = carRepository.findById(car_id)
