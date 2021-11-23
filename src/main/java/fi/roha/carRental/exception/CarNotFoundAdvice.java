@@ -1,4 +1,4 @@
-package fi.roha.carRental;
+package fi.roha.carRental.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,4 +1,4 @@
-package fi.roha.carRental;
+package fi.roha.carRental.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
