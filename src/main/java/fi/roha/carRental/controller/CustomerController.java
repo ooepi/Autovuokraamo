@@ -11,50 +11,54 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import fi.roha.carRental.exception.CarNotFoundException;
 import fi.roha.carRental.repository.CarRepository;
+import fi.roha.carRental.repository.CustomerRepository;
+import fi.roha.carRental.repository.RentRepository;
 import fi.roha.carRental.model.Car;
+import fi.roha.carRental.model.Customer;
+import fi.roha.carRental.model.Rent;
 
 @RestController
-public class CarController {
+public class CustomerController {
 	
-	 private static final Logger logger = LoggerFactory.getLogger(CarController.class);
+	 private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 	
 	@Autowired
-	CarRepository carRepository;
+	CustomerRepository customerRepository;
 	
 	@CrossOrigin(origins = "http://localhost:3000")
 	//@CrossOrigin(origins = "http://localhost:8082")
-	@GetMapping("/cars")
-	public List<Car> getAllCars() {
-		return carRepository.findAll();
+	@GetMapping("/customers")
+	public List<Customer> getAllCustomers() {
+		return customerRepository.findAll();
 	}
 	
 	@CrossOrigin(origins = "http://localhost:3000")
 	//@CrossOrigin(origins = "http://localhost:8082")
-	@GetMapping("/cars/{car_id}")
-	public Car GetLicense(@PathVariable Long car_id) {
-		Car car = carRepository.findById(car_id).orElseThrow(() -> new CarNotFoundException(car_id));
-		return car;
+	@GetMapping("/customers/{customer_id}")
+	public Customer GetLicense(@PathVariable Long customer_id) {
+		Customer customer = customerRepository.findById(customer_id).orElseThrow(() -> new CarNotFoundException(customer_id));
+		return customer;
 	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	//@CrossOrigin(origins = "http://localhost:8082")
-	@PostMapping("/cars")
-	public void createCar(@Valid @RequestBody Car car) {
-		carRepository.save(car);
-		logger.info("New car: " + car);
+	@PostMapping("/customers")
+	public void createCustomer(@Valid @RequestBody Customer customer) {
+		customerRepository.save(customer);
+		logger.info("New customer: " + customer);
 	}
-	
+	/*
 	@CrossOrigin(origins = "http://localhost:3000")
 	//@CrossOrigin(origins = "http://localhost:8082")
 	@DeleteMapping("/cars/{id}")
 	public ResponseEntity<?> deleteCar(@PathVariable(value = "id") Long car_id) throws CarNotFoundException{
-		Car car = carRepository.findById(car_id)
+		Car car = rentRepository.findById(car_id)
 				.orElseThrow(() -> new CarNotFoundException(car_id));
 		
-		carRepository.delete(car);
+		rentRepository.delete(car);
 		logger.info("Deleted car: " + car_id );
 		
 		return ResponseEntity.ok().build();
 	}
-	
+	*/
 }

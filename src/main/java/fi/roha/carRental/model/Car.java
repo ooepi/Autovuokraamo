@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Car {
 	
 	private @Id @GeneratedValue Long car_id;
-	private String mark;
+	private String make;
 	private String model;
 	private String type;
 	private int seats;
@@ -18,8 +18,8 @@ public class Car {
 	
 	public Car () {}
 	
-	public Car(String mark, String model, String type, int seats, Double price) {
-		this.mark = mark;
+	public Car(String make, String model, String type, int seats, Double price) {
+		this.make = make;
 		this.model = model;
 		this.type = type;
 		this.seats = seats;
@@ -34,12 +34,12 @@ public class Car {
 		this.car_id = car_id;
 	}
 
-	public String getMark() {
-		return mark;
+	public String getMake() {
+		return make;
 	}
 
-	public void setMark(String mark) {
-		this.mark = mark;
+	public void setMake(String make) {
+		this.make = make;
 	}
 
 	public String getModel() {
@@ -76,7 +76,7 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [car_id=" + car_id + ", mark=" + mark + ", model=" + model + ", type=" + type + ", seats=" + seats
+		return "Car [car_id=" + car_id + ", make=" + make + ", model=" + model + ", type=" + type + ", seats=" + seats
 				+ ", price=" + price + "]";
 	}
 }
