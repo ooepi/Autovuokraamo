@@ -8,8 +8,8 @@ A simple car rental website
 
 ## Features
 
-As a user, ability to rent different types of cars for chosen periods
-As admin, ability to add different cars and view rentals
+- As a user, ability to rent different types of cars for chosen periods
+- As admin, ability to add different cars and view rentals
 
 ## Technologies used
 
