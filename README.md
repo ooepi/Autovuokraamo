@@ -13,7 +13,9 @@ As admin, ability to add different cars and view rentals
 
 ## Technologies used
 
-Java for backend
+### Backend API
+  - Java
   - Spring Boot
 
-Frontend tech not yet chosen
+### Frontend
+  - React
