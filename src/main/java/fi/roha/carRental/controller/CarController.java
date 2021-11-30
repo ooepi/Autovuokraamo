@@ -2,8 +2,6 @@ package fi.roha.carRental.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid; 
 import org.slf4j.Logger;
@@ -22,14 +20,12 @@ public class CarController {
 	CarRepository carRepository;
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	//@CrossOrigin(origins = "http://localhost:8082")
 	@GetMapping("/cars")
 	public List<Car> getAllCars() {
 		return carRepository.findAll();
 	}
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	//@CrossOrigin(origins = "http://localhost:8082")
 	@GetMapping("/cars/{car_id}")
 	public Car GetLicense(@PathVariable Long car_id) {
 		Car car = carRepository.findById(car_id).orElseThrow(() -> new CarNotFoundException(car_id));
@@ -37,7 +33,6 @@ public class CarController {
 	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
-	//@CrossOrigin(origins = "http://localhost:8082")
 	@PostMapping("/cars")
 	public void createCar(@Valid @RequestBody Car car) {
 		carRepository.save(car);
@@ -45,7 +40,6 @@ public class CarController {
 	}
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	//@CrossOrigin(origins = "http://localhost:8082")
 	@DeleteMapping("/cars/{id}")
 	public ResponseEntity<?> deleteCar(@PathVariable(value = "id") Long car_id) throws CarNotFoundException{
 		Car car = carRepository.findById(car_id)
