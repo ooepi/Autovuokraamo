@@ -8,12 +8,14 @@ A simple car rental website
 
 ## Features
 
-As a user, ability to rent different types of cars for chosen periods
-As admin, ability to add different cars and view rentals
+- As a user, ability to rent different types of cars for chosen periods
+- As admin, ability to add different cars and view rentals
 
 ## Technologies used
 
-Java for backend
+### Backend API
+  - Java
   - Spring Boot
 
-Frontend tech not yet chosen
+### Frontend
+  - React
