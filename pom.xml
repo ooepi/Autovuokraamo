@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.roha</groupId>
-	<artifactId>jubicbackendAPI</artifactId>
+	<artifactId>CarRental</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>jubicbackendAPI</name>
-	<description>Jubic Backend API challenge</description>
+	<name>CarRental</name>
+	<description>CarRental Backend</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -31,6 +31,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

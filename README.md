@@ -1,7 +1,5 @@
 # Autovuokraamo
 
-Final exercise for the course "Java palvelinohjelmointi"
-
 ## Description
 
 A simple car rental website

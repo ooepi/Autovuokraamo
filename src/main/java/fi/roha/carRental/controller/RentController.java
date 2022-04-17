@@ -30,6 +30,7 @@ public class RentController {
 		Rent rent = rentRepository.findById(rent_id).orElseThrow(() -> new CarNotFoundException(rent_id));
 		return rent;
 	}
+	
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/rents")
@@ -37,6 +38,12 @@ public class RentController {
 		rentRepository.save(rent);
 		logger.info("New rental: " + rent);
 		return rent;
+	}
+	
+	@CrossOrigin(origins = "http://localhost:3000")
+	@GetMapping("/rentscar/{carId}")
+	public List<Rent> getAllRentsForCar(@PathVariable int carId) {
+		return rentRepository.findAllBycarId(carId);
 	}
 
 }

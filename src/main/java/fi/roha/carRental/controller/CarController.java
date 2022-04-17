@@ -27,7 +27,7 @@ public class CarController {
 	
 	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/cars/{car_id}")
-	public Car GetLicense(@PathVariable Long car_id) {
+	public Car GetCarById(@PathVariable Long car_id) {
 		Car car = carRepository.findById(car_id).orElseThrow(() -> new CarNotFoundException(car_id));
 		return car;
 	}

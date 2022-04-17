@@ -9,15 +9,15 @@ import javax.persistence.Id;
 public class Rent {
 	
 	private @Id @GeneratedValue Long rent_id;
-	private int car_id;
+	private int carId;
 	private int customer_id;
 	private Timestamp start_time;
 	private Timestamp end_time;
 	
 	public Rent () {}
 
-	public Rent(int car_id, int customer_id, Timestamp start_time, Timestamp end_time) {
-		this.car_id = car_id;
+	public Rent(int carId, int customer_id, Timestamp start_time, Timestamp end_time) {
+		this.carId = carId;
 		this.customer_id = customer_id;
 		this.start_time = start_time;
 		this.end_time = end_time;
@@ -37,13 +37,13 @@ public class Rent {
 
 
 	public int getCar_id() {
-		return car_id;
+		return carId;
 	}
 
 
 
-	public void setCar_id(int car_id) {
-		this.car_id = car_id;
+	public void setCar_id(int carId) {
+		this.carId = carId;
 	}
 
 
@@ -86,7 +86,7 @@ public class Rent {
 
 	@Override
 	public String toString() {
-		return "Rent [rent_id=" + rent_id + ", car_id=" + car_id + ", customer_id=" + customer_id + ", start_time="
+		return "Rent [rent_id=" + rent_id + ", carId=" + carId + ", customer_id=" + customer_id + ", start_time="
 				+ start_time + ", end_time=" + end_time + "]";
 	}
 	
